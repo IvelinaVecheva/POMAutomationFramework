@@ -37,16 +37,17 @@ public class SmokeTests extends BaseTests{
 
     }
 
-    @Test
+    @Test(priority = 3)
     public void likePost(){
 
         //TODO like post test
     }
 
-    @Test
+    @Test(priority = 4)
     public void logoutTest(){
-        //TODO isUserLogged();
-        //TODO logout test
+        loginTest();
+        homePage.logoutUser();
+        Assert.assertTrue(defaultPage.isLoginButtonDisplayed());
     }
 
 

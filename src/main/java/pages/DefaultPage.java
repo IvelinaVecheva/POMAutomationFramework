@@ -20,4 +20,8 @@ public class DefaultPage extends BasePage {
         loginButton.click();
 
     }
+
+    public boolean isLoginButtonDisplayed(){
+        return loginButton.isDisplayed();
+    }
 }

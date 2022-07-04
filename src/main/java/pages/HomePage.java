@@ -17,6 +17,7 @@ public class HomePage extends BasePage {
     @FindBy(xpath = "(//div[@class='post-feed-img'])[1]/img")
     WebElement firstPost;
 
+
     public HomePage(WebDriver driver) {
         super(driver);
     }
@@ -29,8 +30,16 @@ public class HomePage extends BasePage {
         return logoutButton.isDisplayed();
     }
 
-    public void openFirstPost(){
+    public void openFirstPost() {
         firstPost.click();
     }
 
+    public boolean isUserLogged() {
+        return logoutButton.isDisplayed();
+    }
+    public void logoutUser(){
+        logoutButton.click();
+    }
+
 }
+
