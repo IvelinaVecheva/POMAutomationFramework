@@ -1,19 +1,15 @@
 package pages;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
 
-public class DefaultPage {
-    WebDriver driver;
+public class DefaultPage extends BasePage {
 
 //    By loginButton = By.id("nav-link-login");
 
     public DefaultPage(WebDriver driver) {
-        this.driver = driver;
-        PageFactory.initElements(driver, this);
+        super(driver);
     }
 
     @FindBy(id = "nav-link-login")
